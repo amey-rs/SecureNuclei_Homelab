@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LAB 1 MCQ Quiz - Chapter 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LAB 1 Chapter 1 MCQ Quiz">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <style>
+        /* Custom styling for increased left and right padding */
+        .quiz-container {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .question-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .option {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .timer {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <header class="jumbotron subhead" id="overview">
+            <h1>LAB 2 MCQ Quiz </h1>
+        </header>
+
+        <!-- Quiz Section -->
+        <div class="question-container" id="questionContainer">
+            <!-- Question 1 -->
+            <h2>Question 1: What is the main objective of a homelab?</h2>
+            <label class="option"><input type="radio" name="q1" value="a"> a) Gaming</label>
+            <label class="option"><input type="radio" name="q1" value="b"> b) Watching Movies</label>
+            <label class="option"><input type="radio" name="q1" value="c"> c) Hands-On Learning</label>
+            <label class="option"><input type="radio" name="q1" value="d"> d) Cooking</label>
+
+            <!-- Question 2 -->
+            <h2>Question 2: What does a homelab provide for learning?</h2>
+            <label class="option"><input type="radio" name="q2" value="a"> a) Theoretical knowledge only</label>
+            <label class="option"><input type="radio" name="q2" value="b"> b) Hands-On Learning Experience</label>
+            <label class="option"><input type="radio" name="q2" value="c"> c) Virtual Reality experiences</label>
+            <label class="option"><input type="radio" name="q2" value="d"> d) Cooking classes</label>
+
+            <!-- Add more questions and options as needed -->
+
+            <div class="timer" id="timer">Time Remaining: 5:00</div>
+            <button class="submit-button" onclick="submitAnswers()">Submit Answers</button>
+        </div>
+
+        <!-- Footer Section (similar to lab template) -->
+        <footer id="footer">
+            <!-- Your footer content goes here -->
+        </footer>
+
+        <!-- Javascript files -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            let timeRemaining = 300; // 5 minutes in seconds
+            const timerElement = document.getElementById('timer');
+
+            function updateTimer() {
+                const minutes = Math.floor(timeRemaining / 60);
+                const seconds = timeRemaining % 60;
+                timerElement.textContent = `Time Remaining: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }
+
+            function submitAnswers() {
+                clearInterval(timerInterval); // Stop the timer
+
+                // Add your logic to check the selected answers and provide feedback
+                // For now, just log a message to the console
+                console.log('Answers submitted. Check the console for feedback.');
+
+                // You can add logic to display correct/incorrect feedback and explanations
+            }
+
+            const timerInterval = setInterval(function () {
+                if (timeRemaining > 0) {
+                    timeRemaining--;
+                    updateTimer();
+                } else {
+                    clearInterval(timerInterval); // Stop the timer when time is up
+                    alert('Time is up! Please submit your answers.');
+                    submitAnswers();
+                }
+            }, 1000);
+
+            // Initial timer update
+            updateTimer();
+        </script>
+    </div>
+</body>
+</html>

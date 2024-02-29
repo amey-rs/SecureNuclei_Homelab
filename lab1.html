@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SecureNuclei Homelab LAB 1">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <style>
+        /* Custom styling for increased left and right padding */
+        .blog-container {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container blog-container">
+        <header class="jumbotron subhead" id="overview">
+            <h1>SecureNuclei Homelab LAB 1</h1>
+        </header>
+
+        <!-- Navigation Bar (similar to index.html) -->
+        <div class="masthead">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li><a href="teaching.html">LAB</a></li>
+                            <li class="active"><a href="#">Security Homelab Setup</a></li>
+                            <!-- Add other navigation items as needed -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Setup Section -->
+        <div class="row-fluid">
+            <div class="span12">
+                <!-- Entry 1 -->
+                <div class="span8 offset2 blog-content">
+                    <h2> Chapter 1: Introduction to Homelab Setup</h2>
+                    <p class="date"></p>
+
+                    <!-- Wrapping the image in an anchor tag to open in a new tab -->
+                    <a href="thumbs/logo.jpg" target="_blank">
+                        <img src="thumbs/logo.jpg" alt="Smaller Image" style="width: 100%; height: 200px; object-fit: cover;">
+                    </a>
+
+                    <p>
+                        Welcome to the world of homelabs, where hands-on learning and practical cybersecurity skills come to life. 
+                        In this chapter, we embark on a journey to understand the essence of a homelab, its significance, and how it forms the bedrock of experiential learning.
+                    </p>
+                    
+                    <!-- Additional Theory Content -->
+                     
+                   <p>
+                    <b>Definition of Homelab:</b>
+                    Let's begin by defining what a homelab is. It's not just a physical or virtual space; 
+                    it's a realm of controlled experimentation and learning that enthusiasts establish within the confines of their homes.
+                    <hr>
+                    <b>Benefits of a Homelab:</b>
+                    <ul style="list-style-type:disc;">
+                        <li>Hands-On Learning:</li>
+                            <ul>
+                                Delve into the immersive world of hands-on learning, 
+                                here theoretical knowledge transforms into practical expertise. 
+                                Discover the power of actively engaging with technologies, troubleshooting issues, and mastering skills.
+                            </ul>
+                        <li>Experimentation:</li>
+                            <ul>
+                                Homelabs provide a secure playground for experimentation. 
+                                Unleash your creativity, try out different configurations, deploy new services, and face challenges head-on without the fear of disrupting production environments.
+                            </ul>
+                        <li>Real-World Application:</li>
+                            <ul>
+                                Bridge the gap between theory and practice. 
+                                Learn how a homelab allows you to apply your knowledge to real-world scenarios, a critical aspect in the dynamic field of cybersecurity.
+                            </ul>
+                      </ul>  
+            
+                   </p>
+                   <hr>
+
+                   <h2> Chapter 2: Hardware and Software Requirements</h2>
+                   <a href="images/lab1.1.png" target="_blank">
+                    <img src="images/lab1.1.png" alt="Smaller Image" style="width: 100%; height: 200px; object-fit: cover;">
+                </a>
+
+                <p>
+                    Greetings, homelab enthusiasts! In this chapter, we dive into the nitty-gritty details of setting up your homelab by addressing the fundamental aspects: hardware and software requirements.
+                    Think of this as choosing the right tools for your cyber workshop.
+                </p>
+                
+                <!-- Additional Theory Content -->
+                 
+               <p>
+                
+                <b>Objective:</b>
+                Our goal here is to guide you in selecting the right hardware components that will serve as the backbone of your homelab,
+                 ensuring it runs efficiently and effectively.
+                <hr>
+                
+                <b>List of Recommended Components:</b>
+                Let's dissect the hardware anatomy. For the CPU, consider the architecture and clock speed;
+                 a multi-core processor is recommended for multitasking. When it comes to RAM, think of it as your homelab's short-term memory—aim for a balance between capacity and speed. 
+                 Storage, the homelab's archive, benefits from SSDs for speed and HDDs for capacity. Don't forget the network interface; a stable and fast connection is crucial for seamless operations.
+                <ul>
+                    <li>Hardware</li>
+                     <ul>
+                        <li>CPU:CPU: A multicore processor (Intel or AMD) with virtualization support (VT-x/AMD-V)</li>
+                        <li>RAM: At least 8 GB (16 GB or more recommended)</li>
+                        <li>Storage: SSD or HDD with sufficient space for virtual machines (VMs).</li>
+                        <li>Network Interface: Wired Ethernet connection.</li>
+                     </ul>
+                     <li>Software</li>
+                     <ul>
+                        <li>Virtualization Software: Install a hypervisor like VMware vSphere, Proxmox, or VirtualBox.</li>
+                        <li>Operating System: Install a base OS (Linux or Windows) on your physical machine.</li>
+                     </ul>
+                  
+                </ul>
+
+
+                <hr>
+                <b>Considerations for Virtualization:</b>
+                Virtualization, the powerhouse of your homelab, demands specific hardware features. Dive into the realm of hardware virtualization support in processors; look for technologies like Intel VT-x or AMD-V. Additionally, 
+                consider features like nested virtualization and I/O virtualization to enhance your virtual machine performance.
+                <hr>
+                
+                <h2> Chapter 3:  Virtual Machine Setup and Networking </h2>
+                    <a href="images/lab1.2.jpg" target="_blank">
+                    <img src="images/lab1.2.jpg" alt="Smaller Image" style="width: 100%; height: 200px; object-fit: cover;">
+                    </a>
+
+                <p>
+                    <b>Virtualization Software Installation:</b>
+                    <ul>
+                        <li>Objective:</li>
+                        <ul>
+                            <li>Now that we've handpicked the components, it's time to lay the digital groundwork. This section is all about installing and configuring the virtualization software that will breathe life into your homelab.</li>
+                        </ul>
+                        <li>Installation Steps:</li>
+                        <ul> Create VMs:Launch the hypervisor and follow these steps</ul>
+                            <li>Configuration:</li>
+                            <ul>
+                                <li>Assign resources (CPU cores, RAM, storage) based on your needs.</li>
+                                 <li>Choose an OS template (e.g., Ubuntu, Windows).</li>
+                            </ul>
+                        <ul>Network Settings</ul>
+                        <ul>
+                            <li>Configure network adapters (bridged, NAT, or host-only).</li>
+                            <li>Set up IP addresses, DNS, and DHCP.</li>
+                        </ul>
+                        <ul>Storage:</ul>
+                        <li>Create virtual disks (VMDK, VDI, or QCOW2).</li>
+                        <li>Attach ISO files for OS installation.</li>
+                         <li>Run Basic Operations on Your VM</li>
+                        
+                    </ul>
+                    <hr>
+                    <p>Key Points
+                        <br/>
+                        <br/>
+            Experiment with different operating systems: Homelabs are a perfect way to test various operating systems such as different Linux distributions (Ubuntu, Kali Linux, Debian) or varying versions of Windows Server.
+                        <br/><hr>
+            Snapshots: Some virtualization software offers a snapshot feature. This allows you to take a "picture" of your VM's state. You can roll back to an earlier snapshot if you encounter issues after making changes.
+                        <br/><hr>
+            Resource Allocation: Balance the resources allocated to each VM with your overall computer's specifications. Over-allocating can lead to slow performance of the host machine.
+                    </p><hr>
+
+                    
+                    <p>Set up a virtual network:
+                         <br/> <br/>
+                        <b>Understanding virtual network modes</b>: Virtualization software usually offers several network modes for VMs. Here are some common types: <br/>
+                        <b>NAT (Network Address Translation)</b>: VMs can access the internet through your host computer, but are typically isolated from each other. This can be a good starting point for simple homelabs.<br/>
+                        <b>Bridged</b>: VMs obtain an IP address directly from your home network router, acting as if they were independent physical machines. This is useful if you want your homelab to interact with other devices on your local network. <br/>
+                        <b>Host-only</b>: VMs can communicate with each other on a private network but cannot access the internet. This is suitable for contained environments where internet access is not needed for your experimentations.<br/>
+                        Creating the virtual network: Your virtualization software will have settings to create a virtual network and select its mode. Follow the instructions within your chosen software.
+                    </p>
+
+
+
+
+                </p>
+                <hr>
+
+
+
+                <h2> Chapter 4:  Homelab Services and Security Measures </h2>
+                    <a href="images/lab1.3.jpg" target="_blank">
+                    <img src="images/lab1.3.jpg" alt="Smaller Image" style="width: 100%; height: 200px; object-fit: cover;">
+                    </a>
+
+                <p>
+                    This step guides you through installing and configuring essential services that enhance the capabilities and functionality of your homelab environment. These services provide valuable tools for learning and practicing cybersecurity concepts.
+                </p>
+                <hr>
+
+		        <p>Install and Configure a DNS Server:<br/>
+			    <br/>
+                Benefits: A Domain Name System (DNS) server translates human-readable domain names (like "https://www.google.com/") into numerical IP addresses (like "142.250.67.206") required to access websites and other internet resources. Having a DNS server within your homelab:
+		    	<br/>
+                Allows you to manage and customize the domain names used within your virtual machines.
+		    	<br/>
+                Provides a realistic environment for practicing DNS-related security concepts.
+		    	<br/>
+                Facilitates easier access and administration of your VMs within the homelab network.
+			<br/>
+		</p>
+	
+               
+		       
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Section (similar to index.html) -->
+        <footer id="footer">
+            <!-- Your footer content goes here -->
+        </footer>
+
+        <!-- Javascript files -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script> $('#main-carousel').carousel(); </script>
+    </div>
+</body>
+</html>
