@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 2_VM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SecureNuclei Homelab LAB 2_VM">
+    <meta name="author" content="">
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <style>
+        /* Custom styling for increased left and right padding */
+        .blog-container {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .slideshow-container {
+            margin-top: 20px; /* Add margin to the top */
+        }
+        .slideshow {
+            position: relative;
+            overflow: hidden; /* Hide overflowing content */
+            border-radius: 10px; /* Add border-radius for curved corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+        }
+        .slide {
+            position: relative; /* Add position relative */
+            text-align: center;
+        }
+        .slide img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Add border-radius for curved corners */
+        }
+        .slide-content {
+            position: absolute;
+            bottom: 20px; /* Position 20px above the bottom of the slide */
+            left: 0; /* Align content to the left */
+            width: 100%; /* Full width */
+            background-color: rgba(16, 14, 14, 0.938);
+            padding: 20px;
+            border-radius: 0 0 10px 10px; /* Add border-radius for curved corners */
+            color: aliceblue;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 60px;
+            color: #007bff;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container blog-container">
+        <!-- Header -->
+        <header class="jumbotron subhead" id="overview">
+            <h1>SecureNuclei Homelab LAB2_VM</h1>
+        </header>
+
+        <!-- Navigation Bar -->
+        <div class="masthead">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li><a href="teaching.html">LAB</a></li>
+                            <li class="active"><a href="#">LAB2_VM</a></li>
+                            <!-- Add other navigation items as needed -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="slideshow">
+                <div class="slide">
+                    <a href="images/lab2.2.jpg" target="_blank">
+                        <img src="images/lab2.2.jpg" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 1 Content</h2>
+                        <p>This is the content related to Photo 1.</p>
+                    </div>
+                </div>
+
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <div class="slide">
+                            <a href="images/lab2.2.jpg" target="_blank">
+                                <img src="images/lab2.2.jpg" alt="Smaller Image">
+                            </a>
+                            <div class="slide-content">
+                                <h2>Photo 2 Content</h2>
+                                <p>This is the content related to Photo 2.</p>
+                            </div>
+                        </div>
+
+
+
+                <!-- Add more slides as needed -->
+            </div>
+            <span class="arrow left" onclick="prevSlide()">&#10094;</span>
+            <span class="arrow right" onclick="nextSlide()">&#10095;</span>
+        </div>
+
+        <!-- Footer Section -->
+        <footer id="footer">
+            <!-- Your footer content goes here -->
+        </footer>
+
+        <!-- JavaScript files -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            var currentSlide = 0;
+            var slides = document.getElementsByClassName("slide");
+
+            function showSlide(n) {
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[n].style.display = "block";
+                currentSlide = n;
+            }
+
+            function nextSlide() {
+                currentSlide++;
+                if (currentSlide >= slides.length) {
+                    currentSlide = 0;
+                }
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide--;
+                if (currentSlide < 0) {
+                    currentSlide = slides.length - 1;
+                }
+                showSlide(currentSlide);
+            }
+
+            showSlide(currentSlide);
+        </script>
+    </div>
+</body>
+</html>
