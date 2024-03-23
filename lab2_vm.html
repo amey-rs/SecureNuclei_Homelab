@@ -18,15 +18,17 @@
         }
         .slideshow-container {
             margin-top: 20px; /* Add margin to the top */
-        }
-        .slideshow {
-            position: relative;
+            position: relative; /* Add position relative */
             overflow: hidden; /* Hide overflowing content */
             border-radius: 10px; /* Add border-radius for curved corners */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
         }
+        .slideshow {
+            display: flex; /* Use flexbox for slideshow */
+            transition: transform 0.5s ease; /* Add smooth transition */
+        }
         .slide {
-            position: relative; /* Add position relative */
+            flex: 0 0 auto; /* Prevent flex items from growing */
             text-align: center;
         }
         .slide img {
@@ -51,6 +53,7 @@
             cursor: pointer;
             font-size: 60px;
             color: #007bff;
+            z-index: 1; /* Ensure arrow is above slideshow */
         }
         .arrow.left {
             left: 10px;
@@ -86,29 +89,144 @@
         <div class="slideshow-container">
             <div class="slideshow">
                 <div class="slide">
-                    <a href="images/lab2.2.jpg" target="_blank">
-                        <img src="images/lab2.2.jpg" alt="Smaller Image">
+                    <a href="splunk/L1.png" target="_blank">
+                        <img src="splunk/L1.png" alt="Smaller Image">
                     </a>
                     <div class="slide-content">
                         <h2>Photo 1 Content</h2>
                         <p>This is the content related to Photo 1.</p>
                     </div>
                 </div>
+                <!-- Add more slides as needed -->
+                <div class="slide">
+                    <a href="splunk/L2.png" target="_blank">
+                        <img src="splunk/L2.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 2 Content</h2>
+                        <p>This is the content related to Photo 2.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
 
-                <div class="slideshow-container">
-                    <div class="slideshow">
-                        <div class="slide">
-                            <a href="images/lab2.2.jpg" target="_blank">
-                                <img src="images/lab2.2.jpg" alt="Smaller Image">
-                            </a>
-                            <div class="slide-content">
-                                <h2>Photo 2 Content</h2>
-                                <p>This is the content related to Photo 2.</p>
-                            </div>
-                        </div>
+                                
+                <div class="slide">
+                    <a href="splunk/L3.png" target="_blank">
+                        <img src="splunk/L3.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 3 Content</h2>
+                        <p>This is the content related to Photo 3.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
 
+                               
+                <div class="slide">
+                    <a href="splunk/L4..png" target="_blank">
+                        <img src="splunk/L4..png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 4 Content</h2>
+                        <p>This is the content related to Photo 4.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
 
+                               
+                <div class="slide">
+                    <a href="splunk/L5.png" target="_blank">
+                        <img src="splunk/L5.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 5 Content</h2>
+                        <p>This is the content related to Photo 5.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
 
+                               
+                <div class="slide">
+                    <a href="splunk/L6.png" target="_blank">
+                        <img src="splunk/L6.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 6 Content</h2>
+                        <p>This is the content related to Photo 6.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+
+                                
+                <div class="slide">
+                    <a href="splunk/L7.png" target="_blank">
+                        <img src="splunk/L7.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 7 Content</h2>
+                        <p>This is the content related to Photo 7.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+
+                               
+                <div class="slide">
+                    <a href="splunk/L8.png" target="_blank">
+                        <img src="splunk/L8.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 8 Content</h2>
+                        <p>This is the content related to Photo 8.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+
+                                
+                <div class="slide">
+                    <a href="splunk/L9.png" target="_blank">
+                        <img src="splunk/L9.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 9 Content</h2>
+                        <p>This is the content related to Photo 9.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+
+                               
+                <div class="slide">
+                    <a href="splunk/L10.png" target="_blank">
+                        <img src="splunk/L10.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 10 Content</h2>
+                        <p>This is the content related to Photo 10.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+
+                               
+                <div class="slide">
+                    <a href="splunk/L11.png" target="_blank">
+                        <img src="splunk/L11.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 11 Content</h2>
+                        <p>This is the content related to Photo 111.</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+
+                                
+                <div class="slide">
+                    <a href="splunk/L12.png" target="_blank">
+                        <img src="splunk/L12.png" alt="Smaller Image">
+                    </a>
+                    <div class="slide-content">
+                        <h2>Photo 12 Content</h2>
+                        <p>This is the content related to Photo 12.</p>
+                    </div>
+                </div>
                 <!-- Add more slides as needed -->
             </div>
             <span class="arrow left" onclick="prevSlide()">&#10094;</span>
@@ -125,7 +243,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script>
             var currentSlide = 0;
-            var slides = document.getElementsByClassName("slide");
+            var slides = document.querySelectorAll(".slide");
 
             function showSlide(n) {
                 for (var i = 0; i < slides.length; i++) {
