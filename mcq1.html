@@ -47,6 +47,20 @@
             font-weight: bold;
             color: #333;
         }
+
+        /* Feedback section */
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -58,22 +72,144 @@
         <!-- Quiz Section -->
         <div class="question-container" id="questionContainer">
             <!-- Question 1 -->
-            <h2>Question 1: What is the main objective of a homelab?</h2>
-            <label class="option"><input type="radio" name="q1" value="a"> a) Gaming</label>
-            <label class="option"><input type="radio" name="q1" value="b"> b) Watching Movies</label>
-            <label class="option"><input type="radio" name="q1" value="c"> c) Hands-On Learning</label>
-            <label class="option"><input type="radio" name="q1" value="d"> d) Cooking</label>
+            <h2>Question 1: What is a homelabs?</h2>
+            <label class="option"><input type="radio" name="q1" value="a"> A. A physical or virtual space for controlled experimentation and learning.</label>
+            <label class="option"><input type="radio" name="q1" value="b"> B. A professional laboratory set up at home.</label>
+            <label class="option"><input type="radio" name="q1" value="c"> C. A virtual reality game.</label>
+            <label class="option"><input type="radio" name="q1" value="d"> D. A home-based gym.</label>
+            <div class="feedback" id="feedback1"></div>
 
             <!-- Question 2 -->
-            <h2>Question 2: What does a homelab provide for learning?</h2>
-            <label class="option"><input type="radio" name="q2" value="a"> a) Theoretical knowledge only</label>
-            <label class="option"><input type="radio" name="q2" value="b"> b) Hands-On Learning Experience</label>
-            <label class="option"><input type="radio" name="q2" value="c"> c) Virtual Reality experiences</label>
-            <label class="option"><input type="radio" name="q2" value="d"> d) Cooking classes</label>
+            <h2>Question 2: What is one of the benefits of a homelab?</h2>
+            <label class="option"><input type="radio" name="q2" value="a"> A. It provides a platform for hands-on learning.</label>
+            <label class="option"><input type="radio" name="q2" value="b"> B. It provides a platform for professional cooking.</label>
+            <label class="option"><input type="radio" name="q2" value="c"> C. It provides a platform for virtual reality gaming.</label>
+            <label class="option"><input type="radio" name="q2" value="d"> D. It provides a platform for home-based gym training.</label>
+            <div class="feedback" id="feedback2"></div>
 
-            <!-- Add more questions and options as needed -->
+            <!-- Question 3 -->
+            <h2>Question 3: How does a homelab help in bridging the gap between theory and practice?</h2>
+            <label class="option"><input type="radio" name="q3" value="a"> A. By allowing you to apply your knowledge to real-world scenarios.</label>
+            <label class="option"><input type="radio" name="q3" value="b"> B. By providing a platform for professional cooking.</label>
+            <label class="option"><input type="radio" name="q3" value="c"> C. By providing a platform for virtual reality gaming.</label>
+            <label class="option"><input type="radio" name="q3" value="d"> D. By providing a platform for home-based gym training.</label>
+            <div class="feedback" id="feedback3"></div>
 
-            <div class="timer" id="timer">Time Remaining: 5:00</div>
+            <!-- Question 4 -->
+            <h2>Question 4: What can you do in the secure playground of a homelab?</h2>
+            <label class="option"><input type="radio" name="q4" value="a"> A. Try out different configurations, deploy new services, and face challenges head-on.</label>
+            <label class="option"><input type="radio" name="q4" value="b"> B. Play virtual reality games.</label>
+            <label class="option"><input type="radio" name="q4" value="c"> C. Conduct professional laboratory experiments.</label>
+            <label class="option"><input type="radio" name="q4" value="d"> D. Cook professional meals.</label>
+            <div class="feedback" id="feedback4"></div>
+
+            <!-- Question 5 -->
+            <h2>Question 5: How does a homelab contribute to the field of cybersecurity?</h2>
+            <label class="option"><input type="radio" name="q5" value="a"> A. By allowing you to apply your knowledge to real-world scenarios.</label>
+            <label class="option"><input type="radio" name="q5" value="b"> B. By providing a platform for professional cooking.</label>
+            <label class="option"><input type="radio" name="q5" value="c"> C. By providing a platform for virtual reality gaming.</label>
+            <label class="option"><input type="radio" name="q5" value="d"> D. By providing a platform for home-based gym training.</label>
+            <div class="feedback" id="feedback5"></div>
+
+            <!-- Additional Questions -->
+            <!-- Question 6 -->
+            <h2>Question 6: What is the recommended type of processor for a homelab setup?</h2>
+            <label class="option"><input type="radio" name="q6" value="a"> A. A multicore processor (Intel or AMD) with virtualization support (VT-x/AMD-V)</label>
+            <label class="option"><input type="radio" name="q6" value="b"> B. A single-core processor without virtualization support</label>
+            <label class="option"><input type="radio" name="q6" value="c"> C. A multicore processor without virtualization support</label>
+            <label class="option"><input type="radio" name="q6" value="d"> D. A single-core processor with virtualization support</label>
+            <div class="feedback" id="feedback6"></div>
+
+            <!-- Question 7 -->
+            <h2>Question 7: How much RAM is recommended for a homelab setup?</h2>
+            <label class="option"><input type="radio" name="q7" value="a"> A. At least 8 GB (16 GB or more recommended)</label>
+            <label class="option"><input type="radio" name="q7" value="b"> B. Less than 8 GB</label>
+            <label class="option"><input type="radio" name="q7" value="c"> C. Exactly 8 GB</label>
+            <label class="option"><input type="radio" name="q7" value="d"> D. More than 16 GB</label>
+            <div class="feedback" id="feedback7"></div>
+
+            <!-- Question 8 -->
+            <h2>Question 8: What type of storage is recommended for a homelab setup?</h2>
+            <label class="option"><input type="radio" name="q8" value="a"> A. SSD or HDD with sufficient space for virtual machines (VMs)</label>
+            <label class="option"><input type="radio" name="q8" value="b"> B. Only SSD with limited space</label>
+            <label class="option"><input type="radio" name="q8" value="c"> C. Only HDD with limited space</label>
+            <label class="option"><input type="radio" name="q8" value="d"> D. Neither SSD nor HDD</label>
+            <div class="feedback" id="feedback8"></div>
+
+            <!-- Question 9 -->
+            <h2>Question 9: What type of network interface is recommended for a homelab setup?</h2>
+            <label class="option"><input type="radio" name="q9" value="a"> A. Wired Ethernet connection</label>
+            <label class="option"><input type="radio" name="q9" value="b"> B. Wireless connection</label>
+            <label class="option"><input type="radio" name="q9" value="c"> C. No specific network interface</label>
+            <label class="option"><input type="radio" name="q9" value="d"> D. Dial-up connection</label>
+            <div class="feedback" id="feedback9"></div>
+
+            <!-- Question 10 -->
+            <h2>Question 10: What is the recommended software for a homelab setup?</h2>
+            <label class="option"><input type="radio" name="q10" value="a"> A. Virtualization Software and a base OS (Linux or Windows)</label>
+            <label class="option"><input type="radio" name="q10" value="b"> B. Only Virtualization Software</label>
+            <label class="option"><input type="radio" name="q10" value="c"> C. Only a base OS (Linux or Windows)</label>
+            <label class="option"><input type="radio" name="q10" value="d"> D. Neither Virtualization Software nor a base OS</label>
+            <div class="feedback" id="feedback10"></div>
+
+            <!-- Question 11 -->
+            <h2>Question 11: What is the first step in setting up a virtual machine (VM)?</h2>
+            <label class="option"><input type="radio" name="q11" value="a"> A. Launch the hypervisor and create VMs</label>
+            <label class="option"><input type="radio" name="q11" value="b"> B. Configure network adapters</label>
+            <label class="option"><input type="radio" name="q11" value="c"> C. Set up IP addresses, DNS, and DHCP</label>
+            <label class="option"><input type="radio" name="q11" value="d"> D. Attach ISO files for OS installation</label>
+            <div class="feedback" id="feedback11"></div>
+
+            <!-- Question 12 -->
+            <h2>Question 12: What is the purpose of a snapshot in virtualization software?</h2>
+            <label class="option"><input type="radio" name="q12" value="a"> A. To take a “picture” of your VM’s state and roll back to it if needed</label>
+            <label class="option"><input type="radio" name="q12" value="b"> B. To create a backup of your VM’s data</label>
+            <label class="option"><input type="radio" name="q12" value="c"> C. To monitor the performance of your VM</label>
+            <label class="option"><input type="radio" name="q12" value="d"> D. To clone your VM</label>
+            <div class="feedback" id="feedback12"></div>
+
+            <!-- Question 13 -->
+            <h2>Question 13: What should be considered when allocating resources to each VM?</h2>
+            <label class="option"><input type="radio" name="q13" value="a"> A. Balance the resources with your overall computer’s specifications</label>
+            <label class="option"><input type="radio" name="q13" value="b"> B. Allocate as many resources as possible to each VM</label>
+            <label class="option"><input type="radio" name="q13" value="c"> C. Allocate minimal resources to each VM</label>
+            <label class="option"><input type="radio" name="q13" value="d"> D. Resources allocation does not affect VM performance</label>
+            <div class="feedback" id="feedback13"></div>
+
+            <!-- Question 14 -->
+            <h2>Question 14: What does NAT (Network Address Translation) mode in virtualization software do?</h2>
+            <label class="option"><input type="radio" name="q14" value="a"> A. Allows VMs to access the internet through your host computer, but typically isolates them from each other</label>
+            <label class="option"><input type="radio" name="q14" value="b"> B. Allows VMs to obtain an IP address directly from your home network router</label>
+            <label class="option"><input type="radio" name="q14" value="c"> C. Allows VMs to communicate with each other on a private network but not access the internet</label>
+            <label class="option"><input type="radio" name="q14" value="d"> D. Does not allow VMs to access the internet or communicate with each other</label>
+            <div class="feedback" id="feedback14"></div>
+
+            <!-- Question 15 -->
+            <h2>Question 15: What is the purpose of creating a virtual network in your virtualization software?</h2>
+            <label class="option"><input type="radio" name="q15" value="a"> A. To select its mode and allow VMs to communicate based on the chosen mode</label>
+            <label class="option"><input type="radio" name="q15" value="b"> B. To connect your VMs to the internet</label>
+            <label class="option"><input type="radio" name="q15" value="c"> C. To isolate your VMs from each other</label>
+            <label class="option"><input type="radio" name="q15" value="d"> D. To monitor network traffic between your VMs</label>
+            <div class="feedback" id="feedback15"></div>
+
+            <!-- Question 16 -->
+            <h2>Question 16: What is the primary function of a Domain Name System (DNS) server?</h2>
+            <label class="option"><input type="radio" name="q16" value="a"> A. Translates human-readable domain names into numerical IP addresses</label>
+            <label class="option"><input type="radio" name="q16" value="b"> B. Provides internet access to virtual machines</label>
+            <label class="option"><input type="radio" name="q16" value="c"> C. Manages the storage of virtual machines</label>
+            <label class="option"><input type="radio" name="q16" value="d"> D. Encrypts data transmission between virtual machines</label>
+            <div class="feedback" id="feedback16"></div>
+
+            <!-- Question 17 -->
+            <h2>Question 17: What are the benefits of having a DNS server within your homelab?</h2>
+            <label class="option"><input type="radio" name="q17" value="a"> A. Allows management and customization of domain names, provides a realistic environment for practicing DNS-related security concepts, and facilitates easier access and administration of VMs</label>
+            <label class="option"><input type="radio" name="q17" value="b"> B. Increases the processing speed of virtual machines</label>
+            <label class="option"><input type="radio" name="q17" value="c"> C. Provides additional storage space for virtual machines</label>
+            <label class="option"><input type="radio" name="q17" value="d"> D. Protects virtual machines from malware attacks</label>
+            <div class="feedback" id="feedback17"></div>
+
+
+            <div class="timer" id="timer">Time Remaining: 1:00</div>
             <button class="submit-button" onclick="submitAnswers()">Submit Answers</button>
         </div>
 
@@ -86,8 +222,9 @@
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script>
-            let timeRemaining = 300; // 5 minutes in seconds
+            let timeRemaining = 60; // 1 minute in seconds
             const timerElement = document.getElementById('timer');
+            let timerExpired = false;
 
             function updateTimer() {
                 const minutes = Math.floor(timeRemaining / 60);
@@ -97,12 +234,54 @@
 
             function submitAnswers() {
                 clearInterval(timerInterval); // Stop the timer
+                timerExpired = true;
 
-                // Add your logic to check the selected answers and provide feedback
-                // For now, just log a message to the console
-                console.log('Answers submitted. Check the console for feedback.');
+                // Check answers for each question
+                checkAnswer("q1", "feedback1");
+                checkAnswer("q2", "feedback2");
+                checkAnswer("q3", "feedback3");
+                checkAnswer("q4", "feedback4");
+                checkAnswer("q5", "feedback5");
+                checkAnswer("q6", "feedback6");
+                checkAnswer("q7", "feedback7");
+                checkAnswer("q8", "feedback8");
+                checkAnswer("q9", "feedback9");
+                checkAnswer("q10", "feedback10");
+                checkAnswer("q11", "feedback11");
+                checkAnswer("q12", "feedback12");
+                checkAnswer("q13", "feedback13");
+                checkAnswer("q14", "feedback14");
+                checkAnswer("q15", "feedback15");
+                checkAnswer("q16", "feedback16");
+                checkAnswer("q17", "feedback17");
 
-                // You can add logic to display correct/incorrect feedback and explanations
+                // Disable radio buttons
+                disableRadioButtons();
+            }
+
+            function checkAnswer(questionId, feedbackId) {
+                const selectedOption = document.querySelector(`input[name=${questionId}]:checked`);
+                const feedbackElement = document.getElementById(feedbackId);
+
+                if (selectedOption) {
+                    if (selectedOption.value === "a") {
+                        feedbackElement.textContent = "Correct Answer";
+                        feedbackElement.classList.add("correct");
+                    } else {
+                        feedbackElement.textContent = `Incorrect Answer: Correct Option is A`;
+                        feedbackElement.classList.add("incorrect");
+                    }
+                } else {
+                    feedbackElement.textContent = "No Option Selected";
+                    feedbackElement.classList.add("incorrect");
+                }
+            }
+
+            function disableRadioButtons() {
+                const radioButtons = document.querySelectorAll('input[type="radio"]');
+                radioButtons.forEach(button => {
+                    button.disabled = true;
+                });
             }
 
             const timerInterval = setInterval(function () {
@@ -111,8 +290,9 @@
                     updateTimer();
                 } else {
                     clearInterval(timerInterval); // Stop the timer when time is up
-                    alert('Time is up! Please submit your answers.');
-                    submitAnswers();
+                    timerExpired = true;
+                    timerElement.textContent = "Time's Up!";
+                    disableRadioButtons();
                 }
             }, 1000);
 
