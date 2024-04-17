@@ -1,0 +1,22 @@
+/* Custom styling for increased left and right padding */
+.blog-container {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.terminal {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    height: 200px; /* Adjust height as needed */
+    overflow-y: scroll;
+}
+
+.input-field {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-family: monospace;
+}
