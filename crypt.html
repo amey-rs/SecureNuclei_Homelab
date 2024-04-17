@@ -17,7 +17,8 @@
             padding-right: 100px;
         }
     </style>
-</head><body>
+</head>
+<body>
     <div class="container blog-container">
         <header class="jumbotron subhead" id="overview">
             <h1>SecureNuclei Homelab LAB 3</h1>
@@ -39,39 +40,69 @@
         </div>
         <!-- Setup Section -->
         <div class="row-fluid">
-            <div class="span12"><div class="span8 offset2 blog-content">
-                <h2> Chapter 1: AES </h2> 
-               
-                <p>
-                    <b> Objective</b>
-                    The objective of Lab 3 is to introduce students to AES (Advanced Encryption Standard) encryption and its relevance in the context of ransomware attacks. By the end of this lab, students will understand how AES encryption works, its role in protecting data, and how it relates to decrypting data encrypted by ransomware.
+            <div class="span12">
+                <div class="span8 offset2 blog-content">
+                    <h2> Chapter 1: AES </h2> 
+                    <p>
+                        <b>Objective</b> The objective of Lab 3 is to introduce students to AES (Advanced Encryption Standard) encryption and its relevance in the context of ransomware attacks. By the end of this lab, students will understand how AES encryption works, its role in protecting data, and how it relates to decrypting data encrypted by ransomware.
+                    </p>
+                    <p><b>Ransomware Attack:</b> A ransomware attack is a type of cyberattack where malicious actors encrypt files or systems and demand payment (a "ransom") from the victim in exchange for decryption keys. Ransomware attacks can have severe consequences, including financial losses, data breaches, and operational disruptions.</p>
+                    <p><b>Delivery Methods:</b> Ransomware is typically delivered through various methods, including phishing emails, exploit kits, malicious websites, and remote desktop protocol (RDP) vulnerabilities. Once executed, ransomware encrypts files on the victim's system, making them inaccessible until a ransom is paid.</p>
+                    <hr>
+                    <p><b>Scenario:</b>
+                        You are a cybersecurity analyst tasked with investigating a ransomware attack on a fictional organization's network. The ransomware has encrypted sensitive files, rendering them inaccessible. Your mission is to decrypt these files and restore them to their original state.
+                    </p>
+
+                    <p><b>Gameplay:</b>
+                        Download AES Folder: To begin, download the AES folder containing encrypted files affected by the ransomware attack.
+                    </p>
+                    <p>Decrypt the Files: Use your knowledge of AES encryption to decrypt the files within the AES folder. You'll need to find the decryption key or passphrase to unlock the encryption and recover the data.</p>
+                    <p>Hints and Clues: Throughout the game, you'll find hints and clues scattered across the lab environment. These hints will guide you in identifying the encryption key or passphrase required for decryption.</p>
+                    <p>Decrypt Successfully: Successfully decrypt all the files affected by the ransomware attack to complete the game. You'll gain valuable insights into AES encryption and its role in cybersecurity.</p>
+
+                    <hr>
+                    <p><b>Learning Outcomes:</b>
+                        Understand the basics of AES encryption and its importance in securing data.
+                    </p>
+                    <p>Apply encryption techniques to decrypt files affected by ransomware and mitigate its effects.</p>
+
+                    <hr>
+                    <p>
+                        <b>Note: Play at Your Own Risk</b>
+                    </p>
+                    <p>This game is an open-source cybersecurity learning experience designed for educational purposes. As an open-source project, the creator provides the game as-is, and users are responsible for their actions and any consequences that may arise from gameplay. The creator of this game and any associated entities are not responsible for any mistakes, errors, or damages incurred during gameplay.
+
+                    </p>
 
 
-                </p>
-                <p><b>Ransomware Attack:</b>
-                    A ransomware attack is a type of cyberattack where malicious actors encrypt files or systems and demand payment (a "ransom") from the victim in exchange for decryption keys. Ransomware attacks can have severe consequences, including financial losses, data breaches, and operational disruptions.
-                </p>
-
-                <p><b>Delivery Methods:</b>
-                    Ransomware is typically delivered through various methods, including phishing emails, exploit kits, malicious websites, and remote desktop protocol (RDP) vulnerabilities. Once executed, ransomware encrypts files on the victim's system, making them inaccessible until a ransom is paid.
 
 
-                </p>
-                
 
-               <hr>
+                    <hr>
+                    <!-- Download Folder Button -->
+                    <button id="downloadButton" class="btn btn-primary">Download Folder - AES</button>
+                </div>
             </div>
-
         </div>
-    </div>
-               <!-- Footer Section (similar to index.html) -->
+        <!-- Footer Section (similar to index.html) -->
         <footer id="footer">
             <!-- Your footer content goes here -->
         </footer>
 
-        <!-- Javascript files -->
+        <!-- JavaScript files -->
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script> $('#main-carousel').carousel(); </script>
+        <script>
+            $('#main-carousel').carousel();
+
+            // JavaScript for downloading the folder when the button is clicked
+            document.getElementById("downloadButton").addEventListener("click", function() {
+                var anchor = document.createElement("a");
+                anchor.href = "https://drive.google.com/file/d/1eGvOydrdYdx6mYGurm7NmNzPwJ-JMNy7/view?usp=sharing"; // Replace with the actual URL of the folder you want to download
+                anchor.download = "AES.zip"; // Specify the default filename for the downloaded folder
+                anchor.click();
+            });
+        </script>
     </div>
 </body>
+</html>
